@@ -11,10 +11,12 @@ close_icon.addEventListener('click', function() {
 // favourite
 
 function heartchange(event) {
-    if (event.target.src == 'http://127.0.0.1:5500/Projects/Nostra/images/blackheart.png') {
-        event.target.src = './images/redheart.png'
-    }
-    else {
-        event.target.src = 'http://127.0.0.1:5500/Projects/Nostra/images/blackheart.png'
+    
+    if (event.target.src.includes('blackheart.png')) {
+        alert(event.target.src.includes('blackheart.png'))
+        event.target.src = './images/redheart.png';
+    } else {
+        alert(event.target.src.includes('blackheart.png'))
+        event.target.src = './images/blackheart.png';
     }
 }
