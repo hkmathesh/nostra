@@ -73,9 +73,54 @@ body {
     cursor: pointer;
 }
 
-.menubar {
+.menubar-icon {
     display: none;
 }
+
+/* Side Nav bar */
+.sidenavbar {
+    position: fixed;
+    top: 0;
+    right: -50%;
+    width: 50%;
+    height: 100vh;
+    z-index: 25;
+    transition: right 0.7s ease-in-out;
+    background-color: black;
+    color: white;
+}
+
+.sidenav-items {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.sidenav-items li {
+    list-style: none;
+}
+
+.sidenav-items a {
+    text-decoration: none;
+    color: white;
+}
+
+.sidenav-items a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.closenavbar {
+    cursor: pointer;
+}
+
+.closenavbar_position {
+    text-align: right;
+    padding: 15px 20px;
+}
+
 
 /* Slider  */
 .slider {
@@ -148,7 +193,6 @@ body {
     top: 50%;
     right: 5%;
 }
-
 
 /* Brands */
 .brands {
@@ -383,20 +427,6 @@ body {
 }
 
 
-/* Media Query */
-
-/* Mobile */
-@media screen and (max-width: 900px) {
-    .menubar {
-        display: block;
-    }
-
-    .navbar-items {
-        display: none;
-    }
-}
-
-
 /* ===================== Collections page ===================== */
 
 .filters {
@@ -534,7 +564,9 @@ body {
     opacity: 0.9;
 }
 
+
 /* Responsive Design */
+
 @media (max-width: 600px) {
     .contactus {
         padding: 5%;
@@ -547,5 +579,19 @@ body {
 
     .btn-submit {
         font-size: 14px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 900px) {
+    .menubar-icon {
+        display: block;
+        cursor: pointer;
+        z-index: 1000;
+        position: relative;
+    }
+
+    .navbar-items {
+        display: none;
     }
 }
