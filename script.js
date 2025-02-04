@@ -8,15 +8,15 @@ close_icon.addEventListener('click', function() {
 })
 
 
-// favourite
+// Favourite
 
 function heartchange(event) {
     
     if (event.target.src.includes('blackheart.png')) {
-        alert(event.target.src.includes('blackheart.png'))
+        // alert(event.target.src.includes('blackheart.png'))
         event.target.src = './images/redheart.png';
     } else {
-        alert(event.target.src.includes('blackheart.png'))
+        // alert(event.target.src.includes('blackheart.png'))
         event.target.src = './images/blackheart.png';
     }
 }
