@@ -60,6 +60,7 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             currentIndex = 0; // Loop back to first image
         }
+        // currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
         updateSlider();
     });
 
@@ -69,9 +70,17 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             currentIndex = images.length - 1; // Loop back to last image
         }
+        // currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
         updateSlider();
     });
 });
+
+
+/*
+"DOMContentLoaded" --> 
+It ensures that the script runs only after the HTML document has been fully loaded but before external resources like images, stylesheets, or iframes are loaded.
+If you place the <script> just before the closing </body> tag, the document will already be loaded, and DOMContentLoaded won't be necessary.
+*/ 
 
 
 // Filtering
